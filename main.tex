@@ -130,7 +130,21 @@ D) The final value of g will be the avg of all the g’s obtained in the experim
 
 \subsubsection{Errors(for g)}
 The equation deduced after error analysis on the above equation is:(Assuming n=3)\par
+\textbf{Least count for heights h and H = 0.001 m and for time = 0.001 s.}\par
 
+Derivation for the Error Propagation:
+\begin{align} 
+		g &= \frac{8He}{t_{*}^{2}}\left(\dfrac{(\sqrt{e})^n-1}{\sqrt{e}-1}\right)^2 \nonumber
+\end{align}
+    Taking log both sides by taking n = 3:
+\begin{align} 
+            \log_e g &= \log_e H + \log_e t^{-2} + 2(log_e ({e^{3/2}-1}) - log_e ({\sqrt{e}-1})) \nonumber
+\end{align}
+    Differentiating both sides we get:
+\begin{align} 
+        \frac{\partial{g}}{g} &= \frac{\partial{H}}{H} + \frac{\partial{e}}{e} + \frac{2\partial{t_n^*}}{t_n^*} + \left|\frac{3\partial{e^{3/2-1}}}{\sqrt{e}-1} + \frac{\partial{e^{-1/2}}}{\sqrt{e}-1}\right|\partial{e} \nonumber
+\end{align}
+   Finally we get:
 \begin{align} 
 	\begin{split}
 		\frac{\partial{g}}{g} &= \frac{\partial{H}}{H} + \frac{\partial{e}}{e}+\frac{2\partial{t_m^*}}{t_m^*}+\left|\frac{3\sqrt{e}\partial{e}}{e^{3/2}-1}\right|+\left|\frac{\partial{e}}{\sqrt{e}(\sqrt{e}-1)}\right|\\
@@ -162,6 +176,14 @@ E) Calculate the average of all the e’s calculated in the above steps. This e 
 
 \subsubsection{Errors(for e)}
 The equation deduced after error analysis on the above equation is:\par
+Derivation for the Error Propagation:
+\begin{align} 
+		e &= \frac{h}{H} \nonumber
+\end{align}
+Taking log both sides :
+\begin{align}
+\log_e e &= \log_e h - \log_e H \nonumber
+\end{align}
 
 \begin{align} 
 	\begin{split}
@@ -217,7 +239,7 @@ So the error in e calculated using the equation above is \partial{e}=
 \end{tabular}
 \caption{Observation Table for g}
 \end{table}
-So the final $t_n^*_{avg}$ = 2.130 s\\
+So the final $t_n^*_{avg}$ = 2.0328 s\\
 So the final $g_{avg}$ = 8.793 $m/sec^2$\\
 So the error in g calculated using the equation above is \partial{g}=
 \newpage
@@ -285,7 +307,7 @@ So the error in g calculated using the equation above is \partial{g}=
 	\caption{Observation Table for e}
 \end{table}
 So the final $e_{avg}$ = 0.479\\
-So the error in e calculated using the equation above is \partial{e}=0.00075 
+So the error in e calculated using the equation above is \partial{e}=0.001
 
 \begin{table}[h]
 \centering
@@ -310,8 +332,9 @@ So the error in e calculated using the equation above is \partial{e}=0.00075
 \end{tabular}
 \caption{Observation Table for g}
 \end{table}
+So the final $t_n^*_{avg}$ = 2.1016\\
 So the final $g_{avg}$ = 10.804 $m/sec^2$\\
-So the error in g calculated using the equation above is \partial{g}=0.07746205512773922
+So the error in g calculated using the equation above is \partial{g}=0.108 
 \newpage
 \subsection{Karanjit Saha(IMT2020003)}
 
@@ -332,7 +355,7 @@ So the error in g calculated using the equation above is \partial{g}=0.077462055
 \end{table}
 So the final $t_n^*_{avg}$ = 2.130 s\\
 So the final $e_{avg}$ = 0.5\\
-So the error in e calculated using the equation above is \partial{e}=
+So the error in e calculated using the equation above is \partial{e}=0.00075 
 
 \begin{table}[h]
 \centering
@@ -358,7 +381,7 @@ So the error in e calculated using the equation above is \partial{e}=
 \end{table}
 So the final $t_n^*_{avg}$ = 2.130 s\\
 So the final $g_{avg}$ = 8.58646 $m/sec^2$
-So the error in g calculated using the equation above is \partial{g}=
+So the error in g calculated using the equation above is \partial{g}=0.7020589174745754
 \newpage
 \subsection{Chinmay Parekh(IMT2020069)}
 
@@ -378,7 +401,7 @@ So the error in g calculated using the equation above is \partial{g}=
 	\caption{Observation Table for e}
 \end{table}
 So the final $e_{avg}$ = 0.543\\
-So the error in e calculated using the equation above is \partial{e}=
+So the error in e calculated using the equation above is \partial{e}=0.001
 
 \begin{table}[h]
 \centering
@@ -402,9 +425,9 @@ So the error in e calculated using the equation above is \partial{e}=
 \end{tabular}
 \caption{Observation Table for g}
 \end{table}
-So the final $t_n^*_{avg}$ = 2.130 s\\
+So the final $t_n^*_{avg}$ = 2.055\\
 So the final $g_{avg}$ = 10.702 $m/sec^2$\\
-So the error in g calculated using the equation above is \partial{g}=
+So the error in g calculated using the equation above is \partial{g}=0.103
 \newpage
 \subsection{Shashank Shekhar(IMT2020112)}
 
