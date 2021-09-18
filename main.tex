@@ -100,7 +100,53 @@ Since obliterating these errors is impossible in real-life scenarios. Hence we n
 
 \textbf{B) Precision}: - Precision represents the closeness of the different results obtained by repeating the same experiments in the same situation along with the same apparatus. \par
 
+\subsection{Coefficient of Restitution(e)}
+From the definition of the coefficient of restitution we know, 
+\begin{align} 
+	\begin{split}
+		e = \frac{h_1}{h_0}\\
+	\end{split}					
+\end{align}
+
+%------------------------------------------------
+\subsubsection{Procedure (for calculating e)}
+For finding e, we follow the below-mentioned steps: - \par
+
+A) Release the ball from some height ‘$h_0$’ and note it in the observation table. \par
+
+B) Record the height to which the ball rises after the first collision (let it be ‘$h_1$’) and note it in the observation table. \par
+
+C) Calculate e by using the equation mentioned beforehand. \par
+
+D) Repeat the above steps several times to get a good idea about the actual e and fill the observation table accordingly. \par
+
+E) Calculate the average of all the e’s calculated in the above steps. This e is the coefficient of restitution of the ball. \par
+
+\subsubsection{Errors (for e)}
+The equation deduced after error analysis on the above equation is:\par
+Derivation for the Error Propagation:
+\begin{align} 
+		e &= \frac{h_1}{h_0} \nonumber
+\end{align}
+Taking log both sides :
+\begin{align}
+\log_e e &= \log_e h_1 + \log_e h_0 \nonumber
+\end{align}
+   Finally we get:
+\begin{align} 
+	\begin{split}
+		\frac{\partial{e}}{e} &= \frac{\partial{h_1}}{h_1} + \frac{\partial{h_0}}{h_0}\\
+	\end{split}					
+\end{align}
+
 \subsection{Acceleration Due to Gravity(g)}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=9cm,height=7cm]{fig.PNG}
+    \caption{Schematic representation of bounces of ball. Note that ball should not have any horizontal component of velocity.}
+    \label{fig:my_label}
+\end{figure*}\n
 
 As we know from Newton’s motion of equations, that if an object is dropped (i.e., initial velocity =0) from some height ‘h’ (such that h is negligibly small compared to the radius of the earth), then  \par
 
@@ -115,81 +161,93 @@ where g = acceleration due to gravity and t= time taken for the object to reach 
 \subsubsection{Procedure (for calculating g)}
 For finding g, we follow the below-mentioned steps: - \par
 
-A) Select a random number ‘n’ such that the ball will be able to bounce at least n number of times. Also, select a height H (which will be constant throughout the experiment)\par
+A) Select a random number ‘n’ such that the ball will be able to bounce at least n number of times. Also, select a height $h_0$ (which will be constant throughout the experiment)\par
 
-B) Drop the ball from H height, record the total time it takes to do n bounces, and name it $T_n^*$. \par
+B) Drop the ball from $h_0$ height, record the total time it takes to do n bounces, and name it $t_n^*$. \par
 
-C) Fill the below mentioned observation table and use the formula mentioned below to use the previously fetched e and the respective H and $T_n^*$ to calculate g. \par
+C) Fill the below mentioned observation table and use the formula mentioned below to use the previously fetched e and the respective $h_0$ and $t_n^*$ to calculate g. \par\par
+
+Derivation of the formula for calculating g:\par
+
+
+
+Let $t_1$ be the time taken between $1^{st}$ and $2^{nd}$ bounce\par
+$t_2$ be the time taken between $2^{nd}$ and $3^{rd}$ bounce and so on...\par\par
+Let total time be $t_n^*$\par and let ball be dropped from initial height $h_0$.
+
+\par
+Modifying Equation 3.1, we get:\par
 \begin{align} 
 	\begin{split}
-		g &= \frac{8He}{t_{n}^{*2}}\left(\dfrac{(\sqrt{e})^n-1}{\sqrt{e}-1}\right)^2\\
+		h &= \frac{2h_1}{(\frac{t_1}{2})^2}=\frac{8h_0e}{(t_1)^2}\\
+	\end{split}					
+\end{align}
+
+Now we know that:\par
+\begin{align} 
+	\begin{split}
+		 t_n^*=t_1+t_2+t_3 +....+ t_n \\
+	\end{split}					
+\end{align}
+
+From equation 3.1 we get:\par
+
+
+\begin{align} 
+	\begin{split}
+		 t_n^*=t_1+2\sqrt{\frac{2h_2}{g}}+2\sqrt{\frac{2h_3}{g}}+....+2\sqrt{\frac{2h_n}{g}}\\
+	\end{split}					
+\end{align}
+
+Substituting value of e in equation 3.3, we get:\par
+
+\begin{align} 
+	\begin{split}
+		 t_n^*=t_1+2(\frac{t_1}{2})\sqrt{e}+2(\frac{t_1}{2})\sqrt[3]{e}+....+2(\frac{t_1}{2})\sqrt[n]{e}\\
+	\end{split}					
+\end{align}
+
+Taking common terms out and applying sum of G.P:\par
+\begin{align} 
+	\begin{split}
+		 t_1=\frac{t_n^*(\sqrt{e}-1)}{(\sqrt{e})^n-1}\\
+	\end{split}					
+\end{align}
+
+Substituting $t_1$ from equation 3.6 in equation 3.2, we finally get:\par
+\begin{align} 
+	\begin{split}
+		\boxed{g = \frac{8h_0e}{t_{n}^{*2}}\left(\dfrac{(\sqrt{e})^n-1}{\sqrt{e}-1}\right)^2}\\
 	\end{split}					
 \end{align}
 	 
 D) The final value of g will be the avg of all the g’s obtained in the experiment. \par
 
-\subsubsection{Errors(for g)}
+\subsubsection{Errors (for g)}
 The equation deduced after error analysis on the above equation is:(Assuming n=3)\par
-\textbf{Least count for heights h and H = 0.01 m and for time = 0.001 s.}\par
+\textbf{Least count for heights h and $h_0$ = 0.01 m and for time = 0.001 s.}\par
 
 Derivation for the Error Propagation:
 \begin{align} 
-		g &= \frac{8He}{t_{n}^{*2}}\left(\dfrac{(\sqrt{e})^n-1}{\sqrt{e}-1}\right)^2 \nonumber
+		g &= \frac{8h_0e}{t_{n}^{*2}}\left(\dfrac{(\sqrt{e})^n-1}{\sqrt{e}-1}\right)^2 \nonumber
 \end{align}
     Taking logarithmic on both sides and taking n = 3:
 \begin{align} 
-            \log_e g &= \log_e H + \log_e t^{-2} + 2(log_e ({e^{3/2}-1}) - log_e ({\sqrt{e}-1})) \nonumber
+            \log_e g &= \log_e h_0 + \log_e t^{-2} + 2(log_e ({e^{3/2}-1}) - log_e ({\sqrt{e}-1})) \nonumber
 \end{align}
     Differentiating on both sides we get:
 \begin{align} 
-        \frac{\partial{g}}{g} &= \frac{\partial{H}}{H} + \frac{\partial{e}}{e} + \frac{2\partial{t_n^*}}{t_n^*} + \left|\frac{3\partial{e^{3/2-1}}}{\sqrt{e}-1} + \frac{\partial{e^{-1/2}}}{\sqrt{e}-1}\right|\partial{e} \nonumber
+        \frac{\partial{g}}{g} &= \frac{\partial{h_0}}{h_0} + \frac{\partial{e}}{e} + \frac{2\partial{t_n^*}}{t_n^*} + \left|\frac{3\partial{e^{3/2-1}}}{\sqrt{e}-1} + \frac{\partial{e^{-1/2}}}{\sqrt{e}-1}\right|\partial{e} \nonumber
 \end{align}
    On further solving the above equation we get:
 \begin{align} 
 	\begin{split}
-		\frac{\partial{g}}{g} &= \frac{\partial{H}}{H} + \frac{\partial{e}}{e}+\frac{2\partial{t_m^*}}{t_m^*}+\left|\frac{3\sqrt{e}\partial{e}}{e^{3/2}-1}\right|+\left|\frac{\partial{e}}{\sqrt{e}(\sqrt{e}-1)}\right|\\
+		\boxed{\frac{\partial{g}}{g} = \frac{\partial{h_0}}{h_0} + \frac{\partial{e}}{e}+\frac{2\partial{t_m^*}}{t_m^*}+\left|\frac{3\sqrt{e}\partial{e}}{e^{3/2}-1}\right|+\left|\frac{\partial{e}}{\sqrt{e}(\sqrt{e}-1)}\right|}\\
 	\end{split}					
 \end{align}
 %------------------------------------------------
 
-\subsection{Coefficient of Restitution(e)}
-From the definition of the coefficient of restitution we know, 
-\begin{align} 
-	\begin{split}
-		e &= \frac{h}{H}\\
-	\end{split}					
-\end{align}
 
-%------------------------------------------------
-\subsubsection{Procedure (for calculating e)}
-For finding e, we follow the below-mentioned steps: - \par
-
-A) Release the ball from some height ‘H’ and note it in the observation table. \par
-
-B) Record the height to which the ball rises after the first collision (let it be ‘h’) and note it in the observation table. \par
-
-C) Calculate e by using the equation mentioned beforehand. \par
-
-D) Repeat the above steps several times to get a good idea about the actual e and fill the observation table accordingly. \par
-
-E) Calculate the average of all the e’s calculated in the above steps. This e is the coefficient of restitution of the ball. \par
-
-\subsubsection{Errors(for e)}
-The equation deduced after error analysis on the above equation is:\par
-Derivation for the Error Propagation:
-\begin{align} 
-		e &= \frac{h}{H} \nonumber
-\end{align}
-Taking log both sides :
-\begin{align}
-\log_e e &= \log_e h - \log_e H \nonumber
-\end{align}
-   Finally we get:
-\begin{align} 
-	\begin{split}
-		\frac{\partial{e}}{e} &= \frac{\partial{H}}{H} + \frac{\partial{h}}{h}\\
-	\end{split}					
-\end{align}
 
 \section{Sources of Error}
 \begin{enumerate}
@@ -211,7 +269,7 @@ Taking log both sides :
 	\centering % Centre the table
 	\begin{tabular}{l l l}
 		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
+		\textbf{$h_0$} & \textbf{$h_1$} & \textbf{e} \\
 		\midrule
 		2.00 m & 1.07 m & 0.53\\
         2.00 m & 1.03 m & 0.51\\
@@ -232,7 +290,7 @@ Therefore ,e = 0.52  $\pm$ &  0.008 \\
 \begin{tabular}{||c c c c c c||} 
 \toprule
  \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
+ h_0 & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
  2.00 m & 0.924 s & 0.679 s  & 0.436 s & 2.039 s & 10.58 $m/s^2$  \\ 
@@ -261,7 +319,7 @@ Therefore ,g = 9.98  $\pm$ &  0.872 $m/s^2$ \\
 	\centering % Centre the table
 	\begin{tabular}{l l l}
 		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
+		\textbf{$h_0$} & \textbf{$h_1$} & \textbf{e} \\
 		\midrule
 		1.60 m & 0.84 m & 0.52\\
         1.60 m & 0.86 m & 0.54\\
@@ -282,7 +340,7 @@ Therefore ,e = 0.53  $\pm$ &  0.0096 \\
 \begin{tabular}{||c c c c c c||} 
 \toprule
  \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
+ h_0 & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
  1.6 m & 0.786 s & 0.597 s  & 0.435 s & 1.818 s & 10.29 $m/s^2$ \\
@@ -311,7 +369,7 @@ Therefore ,g = 9.82  $\pm$ &  1.105 $m/s^2$ \\
 	\centering % Centre the table
 	\begin{tabular}{l l l}
 		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
+		\textbf{$h_0$} & \textbf{$h_1$} & \textbf{e} \\
 		\midrule
 		1.75 m & 0.83 m & 0.47\\
         1.75 m & 0.87 m  & 0.48\\
@@ -332,7 +390,7 @@ Therefore ,e = 0.48  $\pm$ &  0.008 \\
 \begin{tabular}{||c c c c c c||} 
 \toprule
  \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
+ h_0 & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
 1.75 m & 0.651 s & 0.576 s  & 0.503 s & 1.730 s & 10.56 $m/s^2$  \\ 
@@ -361,7 +419,7 @@ Therefore ,g = 10.80  $\pm$ &  0.972 $m/s^2$ \\
 	\centering % Centre the table
 	\begin{tabular}{l l l}
 		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
+		\textbf{$h_0$} & \textbf{$h_1$} & \textbf{e} \\
 		\midrule
 		2.00 m & 1.02 m & 0.51\\
 		2.00 m & 0.99 m  & 0.50\\
@@ -382,7 +440,7 @@ Therefore ,e = 0.50  $\pm$ &  0.001 \\
 \begin{tabular}{||c c c c c c||} 
 \toprule
  \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
+ h_0 & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
  2.00 m & 0.917 s & 0.685 s  & 0.527 s & 2.129 s & 8.60 $m/s^2$  \\ 
@@ -412,7 +470,7 @@ Therefore ,g = 8.59  $\pm$ &  0.702 $m/s^2$ \\
 	\centering % Centre the table
 	\begin{tabular}{l l l}
 		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
+		\textbf{$h_0$} & \textbf{$h_1$} & \textbf{e} \\
 		\midrule
 		2.00 m & 1.10 m & 0.55\\
         2.00 m & 1.09 m  & 0.54\\
@@ -433,7 +491,7 @@ Therefore ,e = 0.54  $\pm$ &  0.007 \\
 \begin{tabular}{||c c c c c c||} 
 \toprule
  \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
+ h_0 & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
  2.00 m & 0.751 s & 0.698 s  & 0.648 s & 2.097 s & 10.51 $m/s^2$  \\ 
@@ -462,7 +520,7 @@ Therefore ,g = 10.70  $\pm$ &  0.935 $m/s^2$ \\
 	\centering % Centre the table
 	\begin{tabular}{l l l}
 		\toprule
-		\textbf{H} & \textbf{h} & \textbf{e} \\
+		\textbf{$h_0$} & \textbf{$h_1$} & \textbf{e} \\
 		\midrule
 		2.00 m & 1.01 m & 0.50\\
         2.00 m & 0.96 m  & 0.48\\
@@ -483,7 +541,7 @@ Therefore ,e = 0.49  $\pm$ &  0.001 \\
 \begin{tabular}{||c c c c c c||} 
 \toprule
  \hline
- H & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
+ h_0 & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
  2.00 m & 0.917 s & 0.687 s  & 0.525 s & 2.129 s & 8.57 $m/s^2$  \\ 
