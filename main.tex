@@ -128,6 +128,14 @@ C) Fill the below mentioned observation table and use the formula mentioned belo
 	 
 D) The final value of g will be the avg of all the g’s obtained in the experiment. \par
 
+\subsubsection{Errors(for g)}
+The equation deduced after error analysis on the above equation is:\par
+
+\begin{align} 
+	\begin{split}
+		\frac{\partial{g}}{g} &= \frac{\partial{H}}{H} + \frac{2\partial{h}}{h}+\frac{2\partial{t_m^*}}{t_m^*}+\frac{3\sqrt{e}\partial{e}}{e^{3/2}-1}+\frac{\partial{e}}{\sqrt{e}(\sqrt{e}-1)}\\
+	\end{split}					
+\end{align}
 %------------------------------------------------
 
 \subsection{Coefficient of Restitution(e)}
@@ -194,16 +202,15 @@ So the final $e_{avg}$ = 0.499
  h & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
- 2 m & 0.917 s & 0.687 s  & 0.525 s & 2.129 s & 8.567 $m/s^2$  \\ 
+ 1.75 m & 0.651 s & 0.576 s  & 0.503 s & 1.73 s & 10.56 $m/s^2$  \\ 
  \hline
- 2 m & 0.889 s & 0.667 s & 0.505 s & 2.061 s & 9.14 $m/s^2$  \\
- \hline 
- 2 m & 0.914 s & 0.656 s & 0.502 s & 2.072 s  & 9.04 $m/s^2$   \\
+ 1.75 m & 0.710 s & 0.592 s & 0.464 s & 1.766 s & 10.603 $m/s^2$  \\
  \hline
- 2 m & 0.912 s & 0.702 s & 0.518 s & 2.132 s  & 8.54 $m/s^2$   \\
+ 1.75 m & 0.655 s & 0.540 s & 0.487 s & 1.682 s  & 10.98 $m/s^2$   \\
  \hline
- 2 m & 0.917 s & 0.688 s & 0.509 s & 2.114 s  & 8.68 $m/s^2$  \\ 
- [1ex]
+ 1.75 m & 0.635 s & 0.605 s & 0.468 s & 1.708 s  & 10.875 $m/s^2$   \\
+ \hline
+ 1.75 m & 0.638 s & 0.565 s & 0.480 s & 1.683 s  & 10.967 $m/s^2$  \\ [1ex]
  \bottomrule
  \hline
 \end{tabular}
@@ -262,11 +269,11 @@ So the final $g_{avg}$ = 8.58646 m/sec2
 		\toprule
 		\textbf{h} & \textbf{H} & \textbf{e} \\
 		\midrule
-		2 m & 1.01 m & 0.505\\
-        2 m & 0.96 m  & 0.480\\
-        2 m & 0.98 m  & 0.490\\
-        2 m & 1.05 m & 0.525 \\
-        2 m & 0.99 m & 0.495 \\
+		1.75 m & 0.83 m & 0.474\\
+        1.75 m & 0.87 m  & 0.48\\
+        1.75 m & 0.83 m  & 0.474\\
+        1.75 m & 0.86 m & 0.49 \\
+        1.75 m & 0.84 m & 0.48 \\
 		\bottomrule
 	\end{tabular}
 	\caption{Observation Table for e}
@@ -350,11 +357,11 @@ So the final $g_{avg}$ = 8.58646 m/sec2
 		\toprule
 		\textbf{h} & \textbf{H} & \textbf{e} \\
 		\midrule
-		2 m & 1.01 m & 0.505\\
-        2 m & 0.96 m  & 0.480\\
-        2 m & 0.98 m  & 0.490\\
-        2 m & 1.05 m & 0.525 \\
-        2 m & 0.99 m & 0.495 \\
+		2 m & 1.1 m & 0.55\\
+        2 m & 1.09 m  & 0.545\\
+        2 m & 1.08 m  & 0.54\\
+        2 m & 1.1 m & 0.55 \\
+        2 m & 1.06 m & 0.53 \\
 		\bottomrule
 	\end{tabular}
 	\caption{Observation Table for e}
@@ -369,16 +376,15 @@ So the final $e_{avg}$ = 0.499
  h & t_0 & t_1 & t_2 & t_n^* & g \\ [0.5ex] 
  \midrule
  \hline\hline
- 2 m & 0.917 s & 0.687 s  & 0.525 s & 2.129 s & 8.567 $m/s^2$  \\ 
+ 2 m & 0.751 s & 0.698 s  & 0.648 s & 2.097 s & 10.509 $m/s^2$  \\ 
  \hline
- 2 m & 0.889 s & 0.667 s & 0.505 s & 2.061 s & 9.14 $m/s^2$  \\
- \hline 
- 2 m & 0.914 s & 0.656 s & 0.502 s & 2.072 s  & 9.04 $m/s^2$   \\
+ 2 m & 0.787 s & 0.605 s & 0.598 s & 1.989 s & 11.479 $m/s^2$  \\
  \hline
- 2 m & 0.912 s & 0.702 s & 0.518 s & 2.132 s  & 8.54 $m/s^2$   \\
+ 2 m & 0.753 s & 0.690 s & 0.604 s & 2.047 s  & 10.67 $m/s^2$   \\
  \hline
- 2 m & 0.917 s & 0.688 s & 0.509 s & 2.114 s  & 8.68 $m/s^2$  \\ 
- [1ex]
+ 2 m & 0.762 s & 0.685 s & 0.623 s & 2.07 s  & 10.785 $m/s^2$   \\
+ \hline
+ 2 m & 0.771 s & 0.690 s & 0.611 s & 2.072 s  & 10.07 $m/s^2$  \\ [1ex]
  \bottomrule
  \hline
 \end{tabular}
